@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			//object creation with constructors
+			function Mobile(model_no)
+			{
+				this.model=model_no;
+				this.price=30000;
+				this.show=function(){ 
+							document.write(this.model + " " + "price is Rs.30000" + "<br>");
+						}
+			}
+			var samsung=new Mobile('galaxy');
+			var moto=new Mobile('motoe2');
+			
+			document.write(typeof(Mobile) + "<br>");
+		/*	for(var a in samsung)
+			{
+				document.write(a + " " +samsung[a] + "<br>");
+				console.log(a+" " + samsung[a]);
+			} */
+			document.write(typeof(moto.show) + "<br>");
+			for(var a in samsung)
+			{
+				if(typeof(samsung[a])!=='function')
+					document.write(a + " " +samsung[a] + "<br>");
+			}
+			document.write(Object.keys(samsung));
+		</script>
+		
+	</body>
+</html>

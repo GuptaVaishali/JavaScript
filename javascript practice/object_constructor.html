@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			//Declaration of object using object constructor
+			var marks=new Object();
+			marks.vaishali=100;
+			marks.ritka=98;
+			marks.tanya=99;
+			marks["sumit nagpal"]=97;
+			marks.total=function(){ return (100+98+97); };
+			document.write(marks.vaishali + " " + marks["sumit nagpal"]);
+			document.write("<br>");
+			document.write(marks['total']() + "<br>");
+			
+			
+		</script>
+		
+	</body>
+</html>

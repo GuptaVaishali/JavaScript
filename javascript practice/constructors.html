@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			//object creation with constructors
+			function Mobile(model_no)
+			{
+				this.model=model_no;
+				this.price=function(){ 
+							document.write(this.model + " " + "price is Rs.30000" + "<br>");
+						}
+			}
+			var samsung=new Mobile('galaxy');
+			var moto=new Mobile('motoe2');
+			samsung.price();
+			moto.price();
+		</script>
+		
+	</body>
+</html>

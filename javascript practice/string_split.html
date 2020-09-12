@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			var str1="vaishali is a good girl";
+			var arr=str1.split(" ");
+			document.write(arr + "<br>");
+			console.log(arr);
+			var st="vaishali&is&a &good&girl";
+			var arr1=st.split('&');
+			document.write(arr1 + "<br>");
+			document.write(arr.reverse().join(" ").toString());
+			
+			var str="vaishali";
+			document.write(str.length+"<br>");
+			var ar=str.split("");
+			document.write(ar.reverse().join("").toString() +"<br>");
+			console.log(ar);
+			console.log(typeof ar.reverse().join("").toString());
+			
+			var stri="hello";
+			stri=stri.split("").reverse().join("");
+			document.write(stri);
+		</script>
+		
+	</body>
+</html>

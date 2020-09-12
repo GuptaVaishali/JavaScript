@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			function disp(a,b,...args)	//rest parameters must be in last.disp(a,b,...args,d) is wrong.
+			{
+				document.write(a + " " + b + "<br>");
+				document.write(args);
+				document.write("<br>");
+				document.write(args[2]);
+			}
+			disp(10,20,30,40,36,78);
+			
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			function Mobile()
+			{
+			}
+			Mobile.prototype.show=function(){	return "super class method"; }
+			function Samsung()
+			{		
+			}
+			
+			//inheritance code
+			function extend(subclass,superclass)
+			{
+				subclass.prototype=Object.create(superclass.prototype);
+				subclass.prototype.constructor=subclass;
+			}
+			extend(Samsung,Mobile);
+			
+			Samsung.prototype.show=function() { return "sub class method" ; }
+			var s=new Samsung();
+			var m=new Mobile();
+			document.write(s.show() + "<br>");
+			document.write(m.show() + "<br>");
+		</script>
+		
+	</body>
+</html>

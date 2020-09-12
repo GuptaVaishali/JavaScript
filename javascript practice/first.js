@@ -1,0 +1,1 @@
+document.write("content inside javascript file with js extension");

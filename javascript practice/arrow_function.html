@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			//Arrow Function
+			var f1 = () => { document.write("Vaishali <br>"); };
+			f1();
+			
+			//Arrow Function with one parameter
+			var f2 = (a) => { document.write(a + "<br>"); };
+			f2(10);
+			
+			//Arrow Function with two parameters
+			var f3= (a,b) => { document.write(a + " " +b + "<br>"); };
+			f3(30,60);
+			
+			//Arrow Function with default value parameter
+			var f4= (a,b=20) => { document.write(a + " " +b + "<br>"); };
+			f4(30,40);
+			f4(30);
+			
+			//Arrow Function with rest arguments
+			var f5= (a,...args) => { document.write(a + " " + args + "<br>"); };
+			f5(30,40,50,38,59);
+			f5(30);
+		</script>
+		
+	</body>
+</html>

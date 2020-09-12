@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			function Mobile(model)
+			{
+				this.model=model;
+			}
+			Mobile.prototype.getModel=function(){	return this.model; }
+			function Samsung(model,price)
+			{
+				Mobile.call(this,model);
+				this.price=price;
+			}
+			
+			//inheritance code
+			function extend(subclass,superclass)
+			{
+				subclass.prototype=Object.create(superclass.prototype);
+				subclass.prototype.constructor=subclass;
+			}
+			extend(Samsung,Mobile);
+			
+			var s=new Samsung('galaxy',3000);
+			
+			document.write(s.getModel() + "<br>");
+			
+		</script>
+		
+	</body>
+</html>

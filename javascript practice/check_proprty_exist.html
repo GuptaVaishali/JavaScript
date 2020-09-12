@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			//object creation with constructors
+			function Mobile(model_no)
+			{
+				this.model=model_no;
+				this.price=30000;
+			}
+			var samsung=new Mobile('galaxy');
+			var moto=new Mobile('motoe2');
+			
+			//Checking price property exist or not.
+			if(typeof samsung.price !== 'undefined')
+				document.write("Available");
+			else
+				document.write("Not Available");
+				
+			//2nd way of checking 
+			if('price' in samsung)
+				document.write("Available");
+			else
+				document.write("Not Available");
+				
+			//3rd way of checking
+			if(moto.hasOwnProperty('model'))
+				document.write("Available");
+			else
+				document.write("Not Available");
+		</script>
+		
+	</body>
+</html>

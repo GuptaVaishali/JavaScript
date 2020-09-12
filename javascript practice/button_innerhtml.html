@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title> javascript</title>
+		<style>
+				#btns{
+					width:75%
+				}
+				.bt{
+					width:30%;
+					height:48px;
+					font-size:24px;
+				}
+		</style>
+	</head>
+	<body>
+	<!--	<ul id="list">
+			<li>java</li>
+			<li>c++</li>
+			<li>c</li>
+			<li>javascript</li>
+		</ul><br>
+		<button  type="button" id="btn">0</button> 
+		<script src="inner_script.js" >
+		</script> -->
+		<div id="btns">
+            <button type="button" id="btn1" class="bt">1</button>
+            <button type="button" id="btn2" class="bt">2</button>
+            <button type="button" id="btn3" class="bt">3</button>
+            <button type="button" id="btn4" class="bt">4</button>
+            <button type="button" id="btn5" class="bt">5</button>
+            <button type="button" id="btn6" class="bt">6</button>
+            <button type="button" id="btn7" class="bt">7</button>
+            <button type="button" id="btn8" class="bt">8</button>
+            <button type="button" id="btn9" class="bt">9</button>
+        </div>
+		<script>
+		/*	var b=document.getElementById("btn");
+			var a=b.innerHTML;
+			console.log(b.innerHTML);
+			btn.addEventListener("click",function(){a++;b.innerHTML=a;}); */
+			
+			var b1=document.getElementById("btn1");
+			var a1=	b1.innerHTML;
+			console.log(a1);
+			var b2=document.getElementById("btn2");
+			var a2=	b2.innerHTML;
+			var b3=document.getElementById("btn3");
+			var a3=b3.innerHTML;
+			var b4=document.getElementById("btn4");
+			var a4=b4.innerHTML;
+			console.log(a4);
+			var b6=document.getElementById("btn6");
+			var a6=b6.innerHTML;
+			var b7=document.getElementById("btn7");
+			var a7=b7.innerHTML;
+			var b8=document.getElementById("btn8");
+			var a8=b8.innerHTML;
+			var b9=document.getElementById("btn9");
+			var a9=b9.innerHTML;
+			btn5.addEventListener("click",function(){
+														var temp=a1;
+														a1=a4;b1.innerHTML=a1;
+														a4=a7; b4.innerHTML=a4;
+														a7=a8;b7.innerHTML=a7;
+														a8=a9; b8.innerHTML=a8;
+														a9=a6;b9.innerHTML=a9;
+														a6=a3;b6.innerHTML=a6;
+														a3=a2; b3.innerHTML=a3;
+														a2=temp;b2.innerHTML=a2; 
+																
+			});
+		</script>
+	</body>
+</html>

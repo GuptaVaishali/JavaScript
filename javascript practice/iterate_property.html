@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			//object creation with constructors as a class
+			var Mobile=function(model_no)
+			{
+				this.model=model_no;				/*instance members */
+				this.price=30000;				
+			}
+			var samsung=new Mobile('galaxy');
+			var moto=new Mobile('motoe2');
+			console.log(samsung);
+			console.log(moto);
+			Mobile.prototype.color="white";			//prototype member
+			document.write(samsung.color + " ");
+			document.write(moto.color);
+			Mobile.prototype.display_detail=function()
+			{
+				document.write(" model: " +this.model + "<br>");
+			}
+			samsung.display_detail();
+			
+			//display only instance members not prototype members.
+			document.write("properties: " + Object.keys(samsung) + "<br>");	
+			
+			//display all properties including all instance and prototype members.
+			for(var p in samsung)
+			{
+				document.write(p+" ");
+			}
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			function display(name1,name2)
+			{
+				document.write(arguments[0] + " " + arguments[1] + " " + arguments[2] + "<br>"); /*both lines
+																									are same */
+				document.write(name1 + " " +name2 + "<br>");		
+				document.write(arguments.length + "<br>");
+			}
+			display("hello","vaishali");
+			
+			function display1(name1)
+			{
+				document.write(arguments[0] + "<br>"); 
+						
+				document.write(arguments.length+ "<br>");	//counts the no. of arguments not count of parameters.
+			}
+			display1("hello","vaishali","gupta");
+			
+			function disp()
+			{
+				arguments[0]="jmi";
+				for(let i=0;i<arguments.length;i++)
+				{
+					document.write(arguments[i] + " ");
+				}
+			}
+			disp("jamia","millia","islamia");
+			
+			document.write("<br>");
+			
+			//Too Many Arguments
+			function add(a,b)
+			{
+				document.write("A: " + a + " " + "B: " + b + " ");
+				document.write("C: " + arguments[2] + " " + "D: " +arguments[3]);
+			}
+			add(2,4,8,5);
+		</script>
+		
+	</body>
+</html>

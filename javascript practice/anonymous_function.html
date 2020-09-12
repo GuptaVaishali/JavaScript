@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			//Anonymous Function:- The Function which has no name.
+			var a=function()
+			{
+				document.write("hello vaishali <br>");
+			}
+			a();
+			
+			var b=function(a,b)
+			{
+				document.write(a + " " + b + "<br>");
+			}
+			b(3,4);
+			
+			//Passing Anonymous function to a function as a parameter
+			function disp(myfun)
+			{
+				return myfun();
+			}
+			document.write(disp(function() { return "vaishali" } ) );
+			document.write("<br>");
+			
+			//returning Anonymous function
+			function display(a)
+			{
+				return (function(b){
+					return a+b} );
+			}
+			var f= display(3);
+			document.write( f(4) );
+			
+		</script>
+		
+	</body>
+</html>

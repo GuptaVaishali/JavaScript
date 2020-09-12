@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			function Mobile()
+			{
+			}
+			Mobile.prototype.getModel=function(){	return this.model; }
+			function Samsung(model,price)
+			{
+				this.model=model;
+				this.price=price;
+			}
+			function Nokia(model)
+			{
+				this.model=model;
+			}
+			//inheritance code
+			function extend(subclass,superclass)
+			{
+				subclass.prototype=Object.create(superclass.prototype);
+				subclass.prototype.constructor=subclass;
+			}
+			extend(Samsung,Mobile);
+			extend(Nokia,Mobile);
+			
+			var s=new Samsung('galaxy',3000);
+			var n=new Nokia('M310');
+			
+			document.write(s.getModel() + "<br>");
+			document.write(n.getModel() + "<br>");
+		</script>
+		
+	</body>
+</html>

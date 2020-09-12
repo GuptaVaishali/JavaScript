@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			function add(a,b=20)
+			{
+				c=a+b;
+				document.write(c + "<br>");
+			}
+			add(30);
+			add(30,40);
+			
+			document.write("second output <br>");
+			//wrong way of use default parameter
+			
+			function add1(a,b=20,c)
+			{
+				document.write(a + "<br>");
+				document.write(b + "<br>");
+				document.write(c + "<br>");
+			}
+			add1(30);
+			add1(30,40);
+			add1(30,40,50);
+			
+			function disp(num,a=[10])
+			{
+				document.write(num + "<br>");
+				document.write(a[0] + "<br>");
+			}
+			disp(200);
+			disp(200,[30]);
+		</script>
+		
+	</body>
+</html>

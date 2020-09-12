@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			//factory function:- The function which returns an object is called factory function.
+		//	var samsung={ model:galaxy };
+		//	var moto= { model:motoe2 };
+			function mobile()
+			{
+				return {
+							model:'galaxy',
+							price:function(){
+								return "price is rs.30000" ;
+							}
+				};
+			}
+			var samsung=new mobile();
+			var nokia=new mobile();
+			document.write(samsung.model + "  " +samsung.price() + "<br>");
+			document.write(nokia.model + "  " + nokia.price() + "<br>");
+			
+			//Function with parameters
+			function mobile1(model_no)
+			{
+				return {
+					model:model_no,
+					price: function(){ return "price is Rs.30000" ;}
+				};
+			}
+			var samsung1=new mobile1("galaxy");
+			var nokia1=new mobile1('3310');
+			document.write(samsung1.model + " " + samsung1.price() + "<br>");
+			document.write(nokia1.model + " " +nokia1.price() + "<br>");
+		</script>
+		
+	</body>
+</html>

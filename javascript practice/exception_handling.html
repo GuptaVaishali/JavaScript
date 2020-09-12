@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			try{
+			//	add();
+				document.write("skipped code <br>");
+			}
+			catch(e)
+			{
+				/*document.write("Message: " + e.message + "<br>");
+				document.write("Name: " + e.name + "<br>");
+				document.write("Stack: " + e.stack + "<br>"); */
+				document.write("Function is not defined <br>");
+			}
+			finally	{
+				document.write("finally block will be executed whether exception occur or not");
+			}
+		</script>
+		
+	</body>
+</html>

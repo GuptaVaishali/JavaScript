@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			var a=10;
+			function show()
+			{
+				var b=20;
+				document.write(b + "<br>");
+				document.write(a + "<br>");
+			}
+			show();
+			
+			function outerfunc()
+			{
+				var outer="variable of outer function";
+				document.write(outer + "<br>");
+				function innerfunc()
+				{
+					var inner="variable of inner function";
+					document.write(inner +  "<br>");
+					document.write(outer + "<br>");
+				}
+				innerfunc();
+				document.write(inner + "<br>");		//error : inner is not defined in outer function.its scope 	is not here.
+			}
+			outerfunc();
+		</script>
+		
+	</body>
+</html>

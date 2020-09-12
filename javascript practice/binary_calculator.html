@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title> javascript</title>
+		<style>
+			body{
+				width:33%
+			}
+			#res{
+				background-color:lightgray;
+				border:solid;
+				height:48px;
+				font-size:20px;
+			}
+			#btn0,#btn1{
+				background-color:lightgreen;
+				color:brown;
+			}
+			#btnClr,#btnEql{
+				background-color:darkgreen;
+				color:white;
+			}
+			#btnSum,#btnSub,#btnMul,#btnDiv{
+				background-color:black;
+				color:red;
+			}
+			.bt{
+				width:25%;
+				height:36px;
+				font-size:18px;
+				margin:0px;
+				float:left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="res"></div>
+        <div id="btns">
+            <button type="button" id="btn0" class="bt">0</button>
+            <button type="button" id="btn1" class="bt">1</button>
+            <button type="button" id="btnClr" class="bt">c</button>
+            <button type="button" id="btnEql" class="bt">=</button>
+            <button type="button" id="btnSum" class="bt">+</button>
+            <button type="button" id="btnSub" class="bt">-</button>
+            <button type="button" id="btnMul" class="bt">*</button>
+            <button type="button" id="btnDiv" class="bt">/</button>
+        </div>
+		<script>
+			var r=document.getElementById("res");
+			var b0=document.getElementById("btn0");
+			var b1=document.getElementById("btn1");
+			var bclr=document.getElementById("btnClr");
+			var beq=document.getElementById("btnEql");
+			var bsum=document.getElementById("btnSum");
+			var bsub=document.getElementById("btnSub");
+			var bmul=document.getElementById("btnMul");
+			var bdiv=document.getElementById("btnDiv");
+			b0.addEventListener("click",function(){
+				r.innerHTML+=b0.innerHTML;
+			});
+			b1.addEventListener("click",function(){
+				r.innerHTML+=b1.innerHTML;
+			});
+			bsum.addEventListener("click",function(){
+				r.innerHTML+=bsum.innerHTML;
+			});
+			bsub.addEventListener("click",function(){
+				r.innerHTML+=bsub.innerHTML;
+			});
+			bmul.addEventListener("click",function(){
+				r.innerHTML+=bmul.innerHTML;
+			});
+			bdiv.addEventListener("click",function(){
+				r.innerHTML+=bdiv.innerHTML;
+			});
+			bclr.addEventListener("click",function(){
+				r.innerHTML=" ";
+			});
+			beq.addEventListener("click",function(){
+				let str=r.innerHTML;
+				let arr=str.split("+");
+				let first=parseInt(arr[0],2);
+				let sec=parseInt(arr[1],2);
+				let result=eval(first+sec);
+				r.innerHTML=Number(result).toString(2);
+			});
+
+		</script>
+	</body>
+</html>

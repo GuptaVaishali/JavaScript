@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			function getArea(w,h)
+			{
+				if(isNaN(w) || isNaN(h)){
+					throw "parameter is not a number <br>";
+				}
+			}
+			try{
+				getArea(4,'A');
+			}
+			catch(e)
+			{
+				document.write(e);
+			}
+			finally	{
+				document.write("finally block will be executed whether exception occur or not");
+			}
+		</script>
+		
+	</body>
+</html>

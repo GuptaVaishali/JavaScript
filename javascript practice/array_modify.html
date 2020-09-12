@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			// Ways of Array creation using array constructor
+			var arr=new Array();	//empty array-declaration
+			arr[0]=10;				//initialization
+			arr[1]=56;
+			arr[2]=47;
+			document.write(arr + "<br>");
+			
+			arr[0]=20;				//modifying Array
+			document.write(arr + "<br>");
+			
+			var arr1=arr;							//both arr1 and arr pointing to the same array
+			document.write(arr1 + "<br>");
+			
+			arr1[2]=78;						//change in one array will reflect in another array.
+			document.write(arr1 + "<br>");
+			document.write(arr + "<br>");
+			
+			arr[1]=45;
+			document.write(arr + "<br>");
+			document.write(arr1 + "<br>");
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			var nums=[14, 25, 36, 47, 58, 69, 70, 81, 92];
+			//document.write(nums[0] +" "+ nums[8]);
+			//document.write(nums.length);
+			function modifyArray(nums) {
+			/*	for(let i=0;i<nums.length;i++)
+				{
+					if(nums[i]%2==0)
+						nums[i]= nums[i]*2;
+					else
+						nums[i]= nums[i]*3;
+				}
+				return nums; */
+			//	var newarr=n=>n= (n%2==0)?n*2:n*3;
+						
+			//	var newarr1=nums.map(n=>n= (n%2==0)?n*2:n*3);
+				return nums.map(n=>n= (n%2)?n*3:n*2); 
+			}
+		/*	var newarr=n=>{if(n%2==0) n*=2;else n*=3;}
+			var newarr1=map(newarr);
+			return newarr1; */
+			document.write(modifyArray(nums)); 
+		
+		</script>
+		
+	</body>
+</html>

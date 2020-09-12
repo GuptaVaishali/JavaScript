@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			//class Delaration
+			class A
+			{
+				constructor()
+				{
+					this.a=10;
+					var d=40;
+					this.show_d=function()
+					{
+						document.write("d : "+d + "<br>");
+					}
+				}
+				b=20;
+				show()
+				{
+					document.write("a: " + this.a + " " +"b: " + this.b  +"<br>");
+				}
+			}
+			var g=new A();
+			document.write("Ai: " +g.a + "<br>");
+			document.write("Ap: " +g.b + "<br>");
+			class B extends A
+			{
+				constructor()
+				{
+					super();
+					this.c=30;
+				}
+			}
+			var s=new B();
+			document.write("Ai: " +s.c + "<br>");
+			document.write("Ap: " +s.a + "<br>");
+			document.write("Ai: " +s.b + "<br>");
+			s.show();
+			s.show_d();
+		</script>
+		
+	</body>
+</html>

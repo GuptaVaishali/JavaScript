@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			function Mobile()
+			{
+				this.a=10;
+			}
+			console.log(Mobile);			//describes function object
+			console.log(Mobile.prototype);	//describes prototype object of function object
+			
+			var lg=new Mobile();
+			console.log(lg.__proto__);	//it also points to the prototype object of function.
+			console.log(Mobile.prototype==lg.__proto__);	//verifies they point to the same prototype object.
+			console.log(Mobile==lg.__proto__.constructor);
+			console.log(Mobile==Mobile.prototype.constructor);
+			
+			console.log(lg.a);
+			Mobile.prototype.a=20;
+			console.log(lg.a);
+		</script>
+		
+	</body>
+</html>

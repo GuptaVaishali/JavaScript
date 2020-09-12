@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			function Mobile()
+			{
+				this.a=10;
+			}
+			
+			Mobile.prototype.z=30;
+			function Samsung()
+			{
+				Mobile.call(this);
+				this.b=20;
+			}
+			//inheriting prototype properties
+			Samsung.prototype=Object.create(Mobile.prototype);
+			Samsung.prototype.constructor=Samsung;
+			
+			var s=new Samsung();
+			document.write(s.b + "<br>");	//Accessing its own properties
+			document.write(s.a + "<br>");	//Accessing its parent ie. Mobile property ie. a
+			document.write(s.z + "<br>");	//Accessing its parent prototype property ie. z
+			
+			Samsung.prototype.z=50;
+			
+			var m=new Mobile();
+			document.write(m.a + "<br>");
+			document.write(m.b + "<br>");
+			document.write(m.z + "<br>");
+			document.write(s.z + "<br>");
+			
+		</script>
+		
+	</body>
+</html>

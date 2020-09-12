@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			//class Delaration
+			class Mobile
+			{
+				constructor(model_no,color){
+					this.model=model_no;
+					this.clr=color;
+				}
+				display()
+				{
+					return "model: " + this.model + " " + "color: " +this.clr ;
+				}
+			}
+			var m=new Mobile('M310','white');
+			var m2=new Mobile('M4210','black');
+			document.write(m.display() + "<br>");
+			document.write(m2.display() + "<br>");
+		</script>
+		
+	</body>
+</html>

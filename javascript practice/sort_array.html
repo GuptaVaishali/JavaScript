@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>javascript</title>
+		
+		<script>
+			let nums=[3,4,2,6,8,78,78,78,23,23,45,2,45];
+			let n=nums.length;
+			//document.write(n);
+			function getSecondLargest(nums) {
+				// Complete the function
+				let n=nums.length;
+				var issorted;
+				for(let i=0;i<n-1;i++)
+				{
+					issorted=true;
+					for(let j=0;j<n-i-1;j++)
+					{
+						if(nums[j]<nums[j+1])
+						{
+							temp=nums[j];
+							nums[j]=nums[j+1];
+							nums[j+1]=temp;
+							issorted=false;
+						}
+					}
+					if(issorted==true)
+						break;
+				}
+				document.write(nums);
+				document.write("<br>");
+				for(let j=1;j<n;j++)
+				{
+					if(nums[j]!=nums[0])
+					{
+						return nums[j];
+						break;
+					}
+				}
+			}
+			
+			document.write(getSecondLargest(nums));
+		</script>
+		
+	</head>
+	<body>		
+	</body>
+</html>

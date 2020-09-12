@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			function Mobile()
+			{
+				this.a=10;
+			}
+			Mobile.prototype.z=20;
+			function Samsung()
+			{		
+				Mobile.call(this);
+				this.b=30;
+			}
+			function Galaxy()
+			{
+				Samsung.call(this);
+				this.c=40;
+			}
+			//inheritance code
+			function extend(subclass,superclass)
+			{
+				subclass.prototype=Object.create(superclass.prototype);
+				subclass.prototype.constructor=subclass;
+			}
+			extend(Samsung,Mobile);
+			extend(Galaxy,Samsung);
+			
+			var s=new Samsung();
+			var m=new Mobile();
+			var g=new Galaxy();
+			
+			document.write("Galaxy object can access properties: <br>");
+			document.write("Mobile a : " +g.a + "<br>");
+			document.write("Mobile prototype property Z : " +g.z + "<br>");
+			document.write("Samsung b : " +g.b + "<br>");
+			document.write("Galaxy C : " +g.c + "<br>");
+			document.write("<br>");
+			
+			document.write("Samsung object can access properties: <br>");
+			document.write("Mobile a : " +s.a + "<br>");
+			document.write("Mobile prototype property Z : " +s.z + "<br>");
+			document.write("Samsung b : " +s.b + "<br>");
+			document.write("Galaxy C : " +s.c + "<br>");
+			document.write("<br>");
+			
+			document.write("Mobile object can access properties: <br>");
+			document.write("Mobile a : " +m.a + "<br>");
+			document.write("Mobile prototype property Z : " +m.z + "<br>");
+			document.write("Samsung b : " +m.b + "<br>");
+			document.write("Galaxy C : " +m.c + "<br>");
+			
+		</script>
+		
+	</body>
+</html>

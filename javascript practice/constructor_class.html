@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>javascript</title>
+	</head>
+	<body>	
+		
+		<script>
+			//object creation with constructors as a class
+			var Mobile=function(model_no,sp)
+			{
+				this.model=model_no;				/*these all are public properties. */
+				this.price=30000;
+				this.selling_price=function(){ 
+							return (this.price+sp);
+						}
+				this.show=function()
+				{
+					document.write("Model No:" + this.model + " " + "price: " +this.selling_price());
+				}
+			}
+			var samsung=new Mobile('galaxy',1000);
+			var moto=new Mobile('motoe2',2000);
+			samsung.show();
+			
+		</script>
+		
+	</body>
+</html>
